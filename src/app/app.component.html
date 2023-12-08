@@ -1,22 +1,3 @@
-<!-- <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <mat-label>Number</mat-label>
-      <input
-        type="text"
-        placeholder="Pick one"
-        aria-label="Number"
-        matInput
-        [formControl]="myControl"
-        [matAutocomplete]="auto"
-      />
-      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-        @for (option of filteredOptions | async; track option) {
-        <mat-option [value]="option">{{ option }}</mat-option>
-        }
-      </mat-autocomplete>
-    </mat-form-field>
-  </form> -->
-<!-- -------------------------------------------------------------------- -->
 <form [formGroup]="metaData">
   <mat-form-field>
     <mat-label>Number</mat-label>
@@ -44,3 +25,41 @@
     Reset
   </button>
 </form>
+<mat-grid-list cols="5" rowHeight="80vh">
+  <mat-grid-tile style="background-color: aqua" colspan="3" rowspan="1"
+    >1</mat-grid-tile
+  >
+  <mat-grid-tile style="background-color: purple" colspan="2" rowspan="1">
+    <div class="div-test">
+      <mat-grid-list
+        cols="5"
+        rowHeight="20vh"
+        *ngFor="let data of dummyObj | keyvalue"
+      >
+        <mat-grid-tile class="data" colspan="2">{{ data.key }}</mat-grid-tile>
+        <mat-grid-tile class="data" colspan="1">:</mat-grid-tile>
+        <mat-grid-tile class="data" colspan="2">
+          <div>
+            {{ data.value }}
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<!-- <mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>
+    <div class="div-test">
+      <mat-grid-list
+        cols="8"
+        rowHeight="2:1"
+        *ngFor="let data of dummyObj | keyvalue"
+      >
+        <mat-grid-tile>1</mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list> -->

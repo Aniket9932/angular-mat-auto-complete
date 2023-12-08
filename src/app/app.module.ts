@@ -8,7 +8,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import {MatSliderModule} from '@angular/material/slider';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +22,8 @@ import {MatSliderModule} from '@angular/material/slider';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatSliderModule
+    MatSliderModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

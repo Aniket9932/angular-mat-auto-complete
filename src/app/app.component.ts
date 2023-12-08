@@ -27,6 +27,13 @@ export class AppComponent implements AfterViewInit, OnInit {
   @ViewChild(MatAutocomplete) autocomplete: MatAutocomplete | any;
   options: string[] = ['One', 'Two', 'Three'];
   dummy: boolean = false;
+
+  dummyObj = {
+    location: '',
+    Age: 23,
+    Name: 'Aniket Mahato',
+    Address: 'North Bamda, Jhargram, Ps- Jhargram',
+  };
   // formControl = new FormControl('');
   metaData: FormGroup = new FormGroup({
     location: new FormControl(''),
@@ -40,7 +47,7 @@ export class AppComponent implements AfterViewInit, OnInit {
     });
   }
   onClick() {
-  console.log('clicked');
+    console.log('clicked');
     this.dummy = !this.dummy;
     this.metaData.controls['location'].patchValue(null);
     console.log(this.autocomplete.options);
