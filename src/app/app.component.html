@@ -1,22 +1,3 @@
-<!-- <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <mat-label>Number</mat-label>
-      <input
-        type="text"
-        placeholder="Pick one"
-        aria-label="Number"
-        matInput
-        [formControl]="myControl"
-        [matAutocomplete]="auto"
-      />
-      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-        @for (option of filteredOptions | async; track option) {
-        <mat-option [value]="option">{{ option }}</mat-option>
-        }
-      </mat-autocomplete>
-    </mat-form-field>
-  </form> -->
-<!-- -------------------------------------------------------------------- -->
 <form [formGroup]="metaData">
   <mat-form-field>
     <mat-label>Number</mat-label>
@@ -38,8 +19,6 @@
     <input id="sliderInput" matSliderThumb [disabled]="true" />
   </mat-slider>
 
-  <!-- <mat-form-field> -->
-  <!-- </mat-form-field> -->
   <button mat-raised-button style="margin-left: 10px" (click)="onClick()">
     Reset
   </button>
